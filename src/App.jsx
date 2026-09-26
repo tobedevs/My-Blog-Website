@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <Router>
+    <Router basename="/My-Blog-Website">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -25,7 +25,7 @@ export default function BlogPage() {
           <p className={`text-small my-3 text-blue-800 rounded-lg w-25 text-center ${theme === 'dark' ? 'bg-[#4B6BFB]' : 'bg-gray-200'}`}>{blog.Category}</p>
           <p className={`font-bold text-[26px] mb-0.5 w-145 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>{blog.description}</p>
           <div className="flex gap-2 my-2.5">
-            <img src="/Image.svg" className="w-6 h-6 rounded-full" />
+            <img src="/My-Blog-Website/images/Image.svg" className="w-6 h-6 rounded-full" />
             <p className="text-gray-500 opacity-50">{blog.name}</p>
             <p className="text-gray-500 opacity-50">August 20, 2022</p>
           </div>

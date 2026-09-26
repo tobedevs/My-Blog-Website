@@ -22,11 +22,11 @@ export default function Navbar() {
       <div className="flex gap-3">
         <div className={`flex gap-15 justify-evenly border rounded-[5px] w-38 ${theme === 'dark' ? 'bg-[242535] text-white' : 'bg-[#E2E8F0]'}`}>
           <p className="opacity-50">Search</p>
-          <img src="/search-outline.svg" className="w-4 h-7" />
+          <img src="/My-Blog-Website/images/search-outline.svg" className="w-4 h-7" />
         </div>
         <button className={`flex rounded-2xl w-10 h-6 relative cursor-pointer ${theme === 'dark' ? 'bg-[#4B6BFB] text-[#ffffff]' : 'bg-[#E2E8F0] text-[#141624]'}`} onClick={toggleTheme}>
           <img 
-            src="/Frame 205.svg" 
+            src="/My-Blog-Website/images/Frame 205.svg" 
             className={`absolute ${theme === 'dark' ? 'right-0' : 'left-0'}`}
           />
         </button>

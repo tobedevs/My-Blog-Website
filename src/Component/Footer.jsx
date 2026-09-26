@@ -53,7 +53,7 @@ export default function Footer() {
           <p className="opacity-50">Got blog articles and offers via email</p>
           <div className="relative mt-2">
             <span className="absolute inset-y-0 right-4 flex items-center pl-2.5 pointer-events-none">
-              <img src="/mail.svg" alt="" />
+              <img src="/My-Blog-Website/images/mail.svg" alt="" />
             </span>
             <input type="text" placeholder="Your email" className={`opacity-50 w-42 h-6 border text-[12px] pl-1.75 rounded-[5px] ${theme === 'dark' ? 'bg-[#242535] text-white opacity-50' : 'bg-white text-black opacity-50'}`} />
           </div>
@@ -63,7 +63,7 @@ export default function Footer() {
       <div className="h-px w-238 border text-[#343442] m-auto"></div>
       <div className="flex w-238 m-auto justify-between">
         <div className="flex gap-1">
-          <div className={`w-6 h-6 mask-[url(/Union.svg)] mask-contain mask-no-repeat ${theme === 'dark' ? 'bg-white' : 'bg-[#141624]'}`} />
+          <div className={`w-6 h-6 mask-[url(/My-Blog-Website/images/Union.svg)] mask-contain mask-no-repeat ${theme === 'dark' ? 'bg-white' : 'bg-[#141624]'}`} />
           <div className="flex flex-col">
             <p>Meta<span className="font-bold">Blog</span></p>
             <p className="text-[10px] opacity-50">© 2023 MetaBlog. All rights reserved.</p>
