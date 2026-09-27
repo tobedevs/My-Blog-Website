@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../Firebase";
 import { toast } from 'react-toastify';
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";

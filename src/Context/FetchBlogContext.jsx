@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { collection, onSnapshot } from "firebase/firestore";
 import { toast } from "react-toastify";
-import { db } from "../firebase";
+import { db } from "../Firebase";
 
 const FetchBlogContext = createContext();
 
