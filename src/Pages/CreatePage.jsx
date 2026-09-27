@@ -15,8 +15,7 @@ const Admin = () => {
   const [loading, setLoading] = useState(false);
   const { theme } = useTheme();
 
-
-  // State for managing blocks instead of a single string
+// State for managing blocks instead of a single string
 const [contentBlocks, setContentBlocks] = useState([
   { type: 'paragraph', text: '' }
 ]);
@@ -39,7 +38,7 @@ const removeBlock = (index) => {
   const handleSubmit = async (e) => {
   e.preventDefault();
 
-  if (!name || !Category || !post || !image || !description) {
+  if (!name || !Category || !image || !description) {
     toast.error("Please fill in all fields.");
     return;
   }
@@ -72,7 +71,7 @@ if (!response.ok) {
       description,
       Category,
       content: contentBlocks,
-      post: post.split(",").map((item) => item.trim())
+      post: post ? post.split(",").map((item) => item.trim()) : []
     });
   };
 
@@ -96,16 +95,13 @@ if (!response.ok) {
   } finally {
     setLoading(false);
   }
-
-
-  
 };
 
   return (
-    <div className={`${theme === 'dark' ? 'bg-[#12131C]' : 'bg-gray-50'}`}>
+    <div className={`w-full overflow-x-hidden ${theme === 'dark' ? 'bg-[#12131C]' : 'bg-gray-50'}`}>
     <Navbar />
-    <div className="min-h-screen px-5 py-10">
-      <div className="mx-auto max-w-2xl">
+    <div className="min-h-screen px-4 md:px-5 py-10">
+      <div className="mx-auto max-w-2xl w-full">
         <div className="mb-8">
           <h1 className={`text-3xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
             Add a new blog
@@ -117,9 +113,9 @@ if (!response.ok) {
 
         <form
           onSubmit={handleSubmit}
-          className="rounded-xl p-6 shadow-sm"
+          className={`rounded-xl p-4 md:p-6 shadow-sm border ${theme === 'dark' ? 'bg-[#181A2A] border-slate-800' : 'bg-white border-gray-100'}`}
         >
-          <div className={`mb-5 ${theme === 'dark' ? 'text-white placeholder:[#E5E7EB]' : 'text-gray-700 placeholder:[#D1D5DB]'}`}>
+          <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
             <label className={`mb-2 block text-sm font-medium `}>
               Author's name
             </label>
@@ -128,11 +124,15 @@ if (!response.ok) {
               placeholder="Enter Author's name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm outline-none transition focus:border-gray-400"
+              className={`w-full rounded-lg border px-4 py-3 text-sm outline-none transition ${
+                theme === 'dark'
+                  ? 'bg-[#202336] border-slate-700 text-[#E2E8F0] placeholder-slate-500 focus:border-slate-500'
+                  : 'bg-white border-gray-200 text-gray-900 placeholder-gray-400 focus:border-gray-400'
+              }`}
             />
           </div>
 
-          <div className={`mb-5 ${theme === 'dark' ? 'text-white placeholder:[#E5E7EB]' : 'text-gray-700 placeholder:[#D1D5DB]'}`}>
+          <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
             <label className={`mb-2 block text-sm font-medium`}>
               Blog Category
             </label>
@@ -141,11 +141,15 @@ if (!response.ok) {
               placeholder="e.g technology, business,sports,lifestyle, etc"
               value={Category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm outline-none transition focus:border-gray-400"
+              className={`w-full rounded-lg border px-4 py-3 text-sm outline-none transition ${
+                theme === 'dark'
+                  ? 'bg-[#202336] border-slate-700 text-[#E2E8F0] placeholder-slate-500 focus:border-slate-500'
+                  : 'bg-white border-gray-200 text-gray-900 placeholder-gray-400 focus:border-gray-400'
+              }`}
             />
           </div>
 
-          <div className="{`mb-5 ${theme === 'dark' ? 'text-white placeholder:[#E5E7EB]' : 'text-gray-700 placeholder:[#D1D5DB]'}`}">
+          <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
             <label className={`mb-2 block text-sm font-medium`}>
               Blog Description
             </label>
@@ -154,11 +158,15 @@ if (!response.ok) {
               placeholder="Enter blog Description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm outline-none transition focus:border-gray-400"
+              className={`w-full rounded-lg border px-4 py-3 text-sm outline-none transition ${
+                theme === 'dark'
+                  ? 'bg-[#202336] border-slate-700 text-[#E2E8F0] placeholder-slate-500 focus:border-slate-500'
+                  : 'bg-white border-gray-200 text-gray-900 placeholder-gray-400 focus:border-gray-400'
+              }`}
             />
           </div>
 
-          <div className={`mb-5 ${theme === 'dark' ? 'text-white placeholder:[#E5E7EB]' : 'text-gray-700 placeholder:[#D1D5DB]'}`}>
+          <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
             <label className={`mb-2 block text-sm font-medium`}>
               Blog image
             </label>
@@ -166,7 +174,11 @@ if (!response.ok) {
               type="file"
               accept="image/*"
               onChange={(e) => setImage(e.target.files[0])}
-              className="w-full cursor-pointer rounded-lg border border-gray-200 px-4 py-3 text-sm text-gray-600"
+              className={`w-full cursor-pointer rounded-lg border px-4 py-3 text-sm ${
+                theme === 'dark'
+                  ? 'bg-[#202336] border-slate-700 text-slate-300 file:text-white file:bg-slate-700 file:border-0 file:rounded file:px-2 file:py-1'
+                  : 'bg-white border-gray-200 text-gray-600'
+              }`}
             />
           </div>
 
@@ -178,7 +190,7 @@ if (!response.ok) {
             
             <div className="flex flex-col gap-4">
               {contentBlocks.map((block, index) => (
-                <div key={index} className={`flex gap-2 items-start p-3 border rounded-lg transition-colors ${theme === 'dark' ? 'border-slate-800 bg-[#181A2A]' : 'border-gray-100 bg-gray-50/50'}`}>
+                <div key={index} className={`flex gap-2 items-start p-3 border rounded-lg transition-colors ${theme === 'dark' ? 'border-slate-800 bg-[#202336]' : 'border-gray-100 bg-gray-50/50'}`}>
   <div className="flex-1">
     <div className="flex justify-between items-center mb-1">
       <span className={`text-xs font-semibold uppercase tracking-wider ${theme === 'dark' ? 'text-slate-400' : 'text-gray-500'}`}>
@@ -194,7 +206,7 @@ if (!response.ok) {
         onChange={(e) => handleBlockChange(index, e.target.value)}
         className={`w-full rounded-lg border px-3 py-2 text-sm outline-none transition ${
           theme === 'dark'
-            ? 'bg-[#202336] border-slate-700 text-[#E2E8F0] placeholder-slate-500 focus:border-slate-500'
+            ? 'bg-[#181A2A] border-slate-700 text-[#E2E8F0] placeholder-slate-500 focus:border-slate-500'
             : 'bg-white border-gray-200 text-gray-900 placeholder-gray-400 focus:border-gray-400'
         }`}
       />
@@ -206,7 +218,7 @@ if (!response.ok) {
         rows="3"
         className={`w-full resize-none rounded-lg border px-3 py-2 text-sm outline-none transition ${
           theme === 'dark'
-            ? 'bg-[#202336] border-slate-700 text-[#E2E8F0] placeholder-slate-500 focus:border-slate-500'
+            ? 'bg-[#181A2A] border-slate-700 text-[#E2E8F0] placeholder-slate-500 focus:border-slate-500'
             : 'bg-white border-gray-200 text-gray-900 placeholder-gray-400 focus:border-gray-400'
         }`}
       />
@@ -228,18 +240,26 @@ if (!response.ok) {
             </div>
 
             {/* Buttons to add new blocks */}
-            <div className="flex gap-3 mt-3">
+            <div className="flex flex-wrap gap-3 mt-3">
               <button
                 type="button"
                 onClick={() => addBlock('paragraph')}
-                className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50 transition"
+                className={`rounded-lg border px-4 py-2 text-xs font-medium transition ${
+                  theme === 'dark'
+                    ? 'border-slate-700 bg-[#202336] text-slate-200 hover:bg-slate-800'
+                    : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
+                }`}
               >
                 + Add Paragraph
               </button>
               <button
                 type="button"
                 onClick={() => addBlock('header')}
-                className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50 transition"
+                className={`rounded-lg border px-4 py-2 text-xs font-medium transition ${
+                  theme === 'dark'
+                    ? 'border-slate-700 bg-[#202336] text-slate-200 hover:bg-slate-800'
+                    : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
+                }`}
               >
                 + Add Header
               </button>
@@ -249,7 +269,7 @@ if (!response.ok) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full cursor-pointer rounded-lg bg-gray-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-60"
+            className="w-full cursor-pointer rounded-lg bg-[#4B6BFB] px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-600 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {loading ? "Adding blog..." : "Add blog"}
           </button>
