@@ -17,11 +17,11 @@ export default function Navbar() {
         <div>Meta<span className="font-bold">Blog</span></div>
       </Link>
       <div className={`flex flex-wrap justify-center gap-3 md:gap-5 ${theme === 'dark' ? 'text-[#ffffff]' : 'text-[#141624]'}`}>
-        <button className="cursor-pointer hover:text-[#007BFF]">Home</button>
-        <button className="cursor-pointer hover:text-[#007BFF]">Blog</button>
-        <button className="cursor-pointer hover:text-[#007BFF]">Single Post</button>
-        <button className="cursor-pointer hover:text-[#007BFF]">Pages</button>
-        <button className="cursor-pointer hover:text-[#007BFF]">Contact</button>
+        <Link to={`/`} className="cursor-pointer hover:text-[#007BFF]">Home</Link>
+        <Link to={`/blog`} className="cursor-pointer hover:text-[#007BFF]">Blog</Link>
+        <Link to={`/admin`} className="cursor-pointer hover:text-[#007BFF]">Single Post</Link>
+        <Link to={`/author`} className="cursor-pointer hover:text-[#007BFF]">Pages</Link>
+        <Link to={`/contact`} className="cursor-pointer hover:text-[#007BFF]">Contact</Link>
       </div>
       <div className="flex items-center gap-3">
         <div className={`flex justify-between items-center px-2 border rounded-[5px] w-36 md:w-38 h-8 ${theme === 'dark' ? 'bg-[#242535] text-white' : 'bg-[#E2E8F0]'}`}>
