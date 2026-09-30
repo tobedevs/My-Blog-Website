@@ -7,6 +7,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 import './App.css'
 import AuthorPage from './Pages/AuthorPage';
+import Footer from './Component/Footer';
+import Blogs from './Component/Blogs';
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
         <Route path="/author" element={<AuthorPage />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/blog/:id" element={<BlogPage />} />
+        <Route path="/contact" element={<Footer />} />
+        <Route path="/blog" element={<Blogs />} />
       </Routes>
     </Router>
     <ToastContainer position="top-center" autoClose={3000} />
