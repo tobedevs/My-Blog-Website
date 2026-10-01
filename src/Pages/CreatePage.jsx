@@ -99,7 +99,6 @@ if (!response.ok) {
 
   return (
     <div className={`w-full overflow-x-hidden ${theme === 'dark' ? 'bg-[#12131C]' : 'bg-gray-50'}`}>
-    <Navbar />
     <div className="min-h-screen px-4 md:px-5 py-10">
       <div className="mx-auto max-w-2xl w-full">
         <div className="mb-8">
@@ -276,7 +275,6 @@ if (!response.ok) {
         </form>
       </div>
     </div>
-    <Footer />
     </div>
   );
 };
