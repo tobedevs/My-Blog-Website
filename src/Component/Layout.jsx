@@ -8,6 +8,9 @@ export default function Layout() {
   const scrollToFooter = () => {
     footerRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  console.log("Button clicked!"); // 1. Does this print when you click Contact?
+    console.log("Footer element:", footerRef.current);
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar onContactClick={scrollToFooter}/>
