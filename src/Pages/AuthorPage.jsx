@@ -8,7 +8,6 @@ export default function AuthorPage() {
     const { theme } = useTheme();
   return (
     <div className={`w-full overflow-x-hidden ${theme === 'dark' ? 'bg-[#181A2A]' : 'bg-white'}`}>
-    <Navbar />
     <div className={`flex flex-col my-11 items-center justify-center gap-4 w-[92%] md:w-full md:max-w-250 h-auto p-6 md:h-90 m-auto rounded-lg ${theme === 'dark' ? 'bg-[#24283B]' : 'bg-[#F4F5F7]'}`}>
         <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
             <img src={`${import.meta.env.BASE_URL}Image1.svg`} alt="" className="w-16 h-16 rounded-full object-cover" />
@@ -72,7 +71,6 @@ export default function AuthorPage() {
     <div className="m-auto w-full max-w-250 px-4 md:px-0">
       <Blogs />
     </div>
-    <Footer />
     </div>
   )
 }
