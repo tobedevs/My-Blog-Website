@@ -14,7 +14,9 @@ export default function Layout() {
       <main className="flex-grow">
         <Outlet />
       </main>
-      <Footer ref={footerRef}/>
+      <div ref={footerRef}>
+        <Footer />
+      </div>
     </div>
   );
 }
