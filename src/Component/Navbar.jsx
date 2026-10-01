@@ -1,8 +1,7 @@
 import useTheme from '../Context/ThemeContext';
 import { Link } from 'react-router-dom';
-import { useNavigate, useLocation } from 'react-router-dom';
 
-export default function NavbarNavbar({ onContactClick }) {
+export default function Navbar({ onContactClick }) {
   const { theme, toggleTheme } = useTheme();
 
   return (
