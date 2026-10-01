@@ -19,7 +19,6 @@ export default function BlogPage() {
 
   return (
     <div className={`w-full overflow-x-hidden ${theme === 'dark' ? 'bg-[#181A2A]' : 'bg-white'}`}>
-      <Navbar />
       <div className={`flex flex-col items-center min-h-screen px-4 md:px-0 ${theme === 'dark' ? 'bg-[#181A2A]' : 'bg-white'}`}>
         <div className="flex flex-col w-full max-w-[800px]">
           <p className={`text-small my-3 text-blue-800 rounded-lg w-25 text-center ${theme === 'dark' ? 'bg-[#4B6BFB]' : 'bg-gray-200'}`}>{blog.Category}</p>
@@ -50,7 +49,6 @@ export default function BlogPage() {
           </div>
         </div> 
       </div>
-      <Footer />
     </div>
   ); 
 };
