@@ -10,7 +10,6 @@ export default function Home() {
 
   return (
     <div className={`flex flex-col items-center relative w-full overflow-x-hidden ${theme === 'dark' ? 'bg-[#181A2A]' : 'bg-white'}`}>
-      <Navbar />
       <img src={`${import.meta.env.BASE_URL}Image 2.svg`} className="w-full max-w-247.5 h-75 md:h-137.5 object-cover px-4 md:px-0 rounded-lg md:rounded-none" />
       <div className={`relative md:absolute md:top-72 lg:top-105 md:left-6 lg:left-56 flex flex-col justify-center items-start gap-3 z-20 border rounded-[5px] w-[92%] md:w-[600px] h-auto md:h-67 p-6 my-4 md:my-0 ${theme === 'dark' ? 'bg-[#181A2A] text-white border-[#181A5A]' : 'bg-white text-black border-[#E2E8F0]'}`}>
         <p className="ml-0 md:ml-10 rounded-[5px] w-23 flex justify-center bg-[#4B6BFB] text-white">Technology</p>
@@ -41,7 +40,6 @@ export default function Home() {
         <Blogs />
       </div>
       <Ads />
-      <Footer className=""/>
     </div>
   )
 }
