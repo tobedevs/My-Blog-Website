@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 import './App.css'
+import Layout from './Component/Layout';
 import AuthorPage from './Pages/AuthorPage';
 import Footer from './Component/Footer';
 import Blogs from './Component/Blogs';
@@ -17,12 +18,14 @@ function App() {
     <Router basename="/My-Blog-Website">
       <ScrollToTop />
       <Routes>
+        <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/author" element={<AuthorPage />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/blog/:id" element={<BlogPage />} />
         <Route path="/contact" element={<Footer />} />
         <Route path="/blog" element={<Blogs />} />
+        </Route>
       </Routes>
     </Router>
     <ToastContainer position="top-center" autoClose={3000} />
@@ -31,6 +34,18 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
