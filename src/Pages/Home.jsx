@@ -39,7 +39,7 @@ export default function Home() {
         <h1 className={`${theme === 'dark' ? 'text-white' : 'text-black'}`}>Latest Post</h1>
         <Blogs />
       </div>
-      <Ads className ="my-20"/>
+      <Ads className ={`flex flex-col my-20 items-center justify-center border rounded-[5px] w-full max-w-[488px] text-[#141624] text-[10px] mx-auto px-4 ${theme === 'dark' ? 'bg-[#242535] text-white opacity-50' : 'bg-[#E2E8F0]'}`}/>
     </div>
   )
 }
