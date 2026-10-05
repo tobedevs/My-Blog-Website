@@ -34,7 +34,7 @@ export default function Home() {
           />
         </Link>
       </div>
-      <Ads className="mt-10 md:mt-48 lg:mt-56" />
+      <Ads className={`flex flex-col mt-10 md:mt-48 lg:mt-56 items-center justify-center border rounded-[5px] w-full max-w-[488px] text-[#141624] text-[10px] mx-auto px-4 ${theme === 'dark' ? 'bg-[#242535] text-white opacity-50' : 'bg-[#E2E8F0]'}`} />
       <div className="flex flex-col items-start w-full max-w-250 px-4 md:px-0 gap-2 mt-8 md:mt-24">
         <h1 className={`${theme === 'dark' ? 'text-white' : 'text-black'}`}>Latest Post</h1>
         <Blogs />
