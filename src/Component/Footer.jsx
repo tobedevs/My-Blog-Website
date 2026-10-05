@@ -4,7 +4,7 @@ export default function Footer() {
   const { theme } = Usetheme();
 
   return (
-    <div className={`flex flex-col mt-20 w-full text-[14px] gap-5 ${theme === 'dark' ? 'bg-[#12131C] text-white' : 'bg-[#F8F9FA] text-black'}`}>
+    <div className={`flex flex-col w-full text-[14px] gap-5 ${theme === 'dark' ? 'bg-[#12131C] text-white' : 'bg-[#F8F9FA] text-black'}`}>
       <div className="flex flex-col lg:flex-row justify-between mt-3.5 px-6 lg:mx-25 gap-8 lg:gap-0">
         <div className="flex flex-col gap-1">
           <h1 className="font-bold">About</h1>
