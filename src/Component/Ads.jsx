@@ -1,6 +1,6 @@
 import useTheme from '../Context/ThemeContext';
 
-export default function Ads({ className = "" }) {
+export default function Ads({ className }) {
   const { theme } = useTheme();
 
   return (
