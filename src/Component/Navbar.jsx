@@ -21,17 +21,11 @@ export default function Navbar({ onContactClick }) {
           <div>Meta<span className="font-bold">Blog</span></div>
         </Link>
         <div className={`hidden md:flex md:justify-center justify-start gap-5 ${theme === 'dark' ? 'text-[#ffffff]' : 'text-[#141624]'}`}>
-
           <Link to={`/`} className="cursor-pointer hover:text-[#007BFF]">Home</Link>
-
           <Link to={`/blog`} className="cursor-pointer hover:text-[#007BFF]">Blog</Link>
-
           <Link to={`/admin`} className="cursor-pointer hover:text-[#007BFF]">Single Post</Link>
-
           <Link to={`/author`} className="cursor-pointer hover:text-[#007BFF]">Pages</Link>
-
           <button onClick={onContactClick} className="cursor-pointer hover:text-[#007BFF]">Contact</button>
-
         </div>
         <div className="flex items-center gap-3">
           <div className={`hidden sm:flex justify-between items-center px-2 border rounded-[5px] w-36 md:w-38 h-8 ${theme === 'dark' ? 'bg-[#242535] text-white' : 'bg-[#E2E8F0]'}`}>
@@ -63,7 +57,7 @@ export default function Navbar({ onContactClick }) {
       </div>
 
       {isOpen && (
-        <div className={`md:hidden flex flex-col items-center gap-4 py-5 border-t ${theme === 'dark' ? 'bg-[#12131C] text-[#ffffff] border-[#242535]' : 'bg-[#F8F9FA] text-[#141624] border-gray-200'}`}>
+        <div className={`md:hidden flex flex-col items-start px-6 gap-4 py-5 border-t ${theme === 'dark' ? 'bg-[#12131C] text-[#ffffff] border-[#242535]' : 'bg-[#F8F9FA] text-[#141624] border-gray-200'}`}>
           <Link to={`/`} onClick={closeMenu} className="cursor-pointer hover:text-[#007BFF]">Home</Link>
           <Link to={`/blog`} onClick={closeMenu} className="cursor-pointer hover:text-[#007BFF]">Blog</Link>
           <Link to={`/admin`} onClick={closeMenu} className="cursor-pointer hover:text-[#007BFF]">Single Post</Link>
