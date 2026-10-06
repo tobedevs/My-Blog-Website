@@ -5,8 +5,7 @@ import useTheme from '../Context/ThemeContext';
 export default function Blogs() {
   const { Blogs } = useFetchedBlogs();
   const { theme } = useTheme();
-  console.log("BLOGS:", Blogs);
-
+  
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {Blogs?.map((blog) => (
