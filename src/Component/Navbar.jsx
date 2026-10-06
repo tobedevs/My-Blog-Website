@@ -20,13 +20,13 @@ export default function Navbar({ onContactClick }) {
           />
           <div>Meta<span className="font-bold">Blog</span></div>
         </Link>
-        <div className={`hidden md:flex justify-start gap-5 ${theme === 'dark' ? 'text-[#ffffff]' : 'text-[#141624]'}`}>
-          <Link to={`/`} className="cursor-pointer hover:text-[#007BFF]">Home</Link>
-          <Link to={`/blog`} className="cursor-pointer hover:text-[#007BFF]">Blog</Link>
-          <Link to={`/admin`} className="cursor-pointer hover:text-[#007BFF]">Single Post</Link>
-          <Link to={`/author`} className="cursor-pointer hover:text-[#007BFF]">Pages</Link>
-          <button onClick={onContactClick} className="cursor-pointer hover:text-[#007BFF]">Contact</button>
-        </div>
+        <div className={`flex flex-col md:flex-row justify-start gap-5 ${theme === 'dark' ? 'text-[#ffffff]' : 'text-[#141624]'}`}>
+  <Link to={`/`} className="cursor-pointer hover:text-[#007BFF]">Home</Link>
+  <Link to={`/blog`} className="cursor-pointer hover:text-[#007BFF]">Blog</Link>
+  <Link to={`/admin`} className="cursor-pointer hover:text-[#007BFF]">Single Post</Link>
+  <Link to={`/author`} className="cursor-pointer hover:text-[#007BFF]">Pages</Link>
+  <button onClick={onContactClick} className="cursor-pointer hover:text-[#007BFF]">Contact</button>
+</div>
         <div className="flex items-center gap-3">
           <div className={`hidden sm:flex justify-between items-center px-2 border rounded-[5px] w-36 md:w-38 h-8 ${theme === 'dark' ? 'bg-[#242535] text-white' : 'bg-[#E2E8F0]'}`}>
             <p className="opacity-50 text-xs">Search</p>
