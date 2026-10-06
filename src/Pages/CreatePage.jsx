@@ -15,7 +15,6 @@ const Admin = () => {
   const [loading, setLoading] = useState(false);
   const { theme } = useTheme();
 
-// State for managing blocks instead of a single string
 const [contentBlocks, setContentBlocks] = useState([
   { type: 'paragraph', text: '' }
 ]);
@@ -31,7 +30,7 @@ const handleBlockChange = (index, value) => {
 };
 
 const removeBlock = (index) => {
-  if (contentBlocks.length === 1) return; // Keep at least one block
+  if (contentBlocks.length === 1) return; 
   setContentBlocks(contentBlocks.filter((_, i) => i !== index));
 };
 
@@ -181,7 +180,6 @@ if (!response.ok) {
             />
           </div>
 
-          {/* Dynamic Content Blocks Section */}
           <div className={`mb-6 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
             <label className={`mb-2 block text-sm font-medium`}>
               Blog post content sections
