@@ -20,7 +20,7 @@ export default function Navbar({ onContactClick }) {
           />
           <div>Meta<span className="font-bold">Blog</span></div>
         </Link>
-        <div className={`flex flex-col md:flex-row justify-start gap-5 ${theme === 'dark' ? 'text-[#ffffff]' : 'text-[#141624]'}`}>
+        <div className={`flex flex-col justify-start items-start gap-5 ${theme === 'dark' ? 'text-[#ffffff]' : 'text-[#141624]'}`}>
   <Link to={`/`} className="cursor-pointer hover:text-[#007BFF]">Home</Link>
   <Link to={`/blog`} className="cursor-pointer hover:text-[#007BFF]">Blog</Link>
   <Link to={`/admin`} className="cursor-pointer hover:text-[#007BFF]">Single Post</Link>
