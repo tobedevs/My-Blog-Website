@@ -20,7 +20,7 @@ export default function Navbar({ onContactClick }) {
           />
           <div>Meta<span className="font-bold">Blog</span></div>
         </Link>
-        <div className={`hidden md:flex justify-center gap-5 ${theme === 'dark' ? 'text-[#ffffff]' : 'text-[#141624]'}`}>
+        <div className={`hidden md:flex md:justify-center justify-start gap-5 ${theme === 'dark' ? 'text-[#ffffff]' : 'text-[#141624]'}`}>
 
           <Link to={`/`} className="cursor-pointer hover:text-[#007BFF]">Home</Link>
 
